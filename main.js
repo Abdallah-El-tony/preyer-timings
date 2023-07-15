@@ -49,7 +49,7 @@ setInterval(()=>{
 },1000)
 
 async function gettimings() {
-    let timings = await fetch('http://api.aladhan.com/v1/timingsByCity/:date?city=EG-MN&country=Minya');
+    let timings = await fetch('https://api.aladhan.com/v1/timingsByCity/:date?city=EG-MN&country=Minya');
     timings = await timings.json();
     console.log(timings)
     renderData(timings.data.timings)
